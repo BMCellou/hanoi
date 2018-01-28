@@ -8,6 +8,11 @@ public class Hanoi {
 
 	public Hanoi(int n){
 		// TODO ...
+		tourInit = new Tour();
+		tourInter = new Tour();
+		tourDest = new Tour();
+		
+		for (int i = n; i >0; i--) tourInit.empiler(new Disque(i));
 	}
 
 	
