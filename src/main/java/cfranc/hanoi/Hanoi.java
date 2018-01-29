@@ -28,7 +28,7 @@ public class Hanoi {
 		tourInit.empiler(petit);
 	}
 	
-	public void bougerSommet(int n, Tour from, Tour to) {
+	public void bougerSommet( int n,Tour from, Tour to) {
 		tourInit = new Tour();
 		tourInter = new Tour();
 		tourDest = new Tour();
@@ -37,12 +37,13 @@ public class Hanoi {
     	if(Move != null){
 	        to.empiler(Move); 
 		 }
+		System.out.println("Bougez le disque " + n + " de " + from + " à " + to);
 	}
 
 	public void deplacer(int nbDisque, Tour from, Tour to, Tour by){
 		if (nbDisque > 0) {
 			deplacer(nbDisque-1, from, to, by);
-			bougerSommet(from, to);
+			bougerSommet(nbDisque, from, to);
 			deplacer(nbDisque-1, by, to, from);
 		}
 	}
