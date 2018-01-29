@@ -33,7 +33,10 @@ public class Hanoi {
 		tourInter = new Tour();
 		tourDest = new Tour();
 		// TODO ...
-		 System.out.println("Bougez le disque " + n + " de " + from + " à " + to);
+		 Disque Move = from.depiler();  
+    	if(Move != null){
+	        to.empiler(Move); 
+		 }
 	}
 
 	public void deplacer(int nbDisque, Tour from, Tour to, Tour by){
