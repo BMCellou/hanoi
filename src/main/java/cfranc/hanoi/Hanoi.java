@@ -42,7 +42,7 @@ public class Hanoi {
 	public void deplacer(int nbDisque, Tour from, Tour to, Tour by){
 		if (nbDisque > 0) {
 			deplacer(nbDisque-1, from, to, by);
-			bougerSommet(nbDisque,from, to);
+			bougerSommet(from, to);
 			deplacer(nbDisque-1, by, to, from);
 		}
 	}
